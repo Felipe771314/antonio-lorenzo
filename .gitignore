@@ -1,0 +1,12 @@
+# Ignorar archivos y carpetas innecesarios
+wp-config.php
+wp-content/uploads/
+node_modules/
+*.log
+*.bak
+*.tmp
+*.swp
+.DS_Store
+.idea/
+.vscode/
+.env
