@@ -1,0 +1,7 @@
+node_modules
+wp-admin
+wp-includes
+wp-content/uploads
+*.min.js
+*.min.css
+vendor

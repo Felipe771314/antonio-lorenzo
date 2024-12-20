@@ -1,0 +1,40 @@
+{
+  "name": "wordpress",
+  "version": "1.0.0",
+  "description": "site to antonio lorenzo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,jsx,css,scss,html,php}'",
+    "lint": "eslint '**/*.{js,jsx,php}' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felipe771314/antonio-lorenzo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Felipe771314/antonio-lorenzo/issues"
+  },
+  "homepage": "https://github.com/Felipe771314/antonio-lorenzo#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "cloudinary": "^2.5.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-wordpress": "^0.1.0",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

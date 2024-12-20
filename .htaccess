@@ -1,0 +1,32 @@
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /wordpress/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wordpress/index.php [L]
+</IfModule>
+# END WordPress
+
+# Bloquear el acceso al archivo wp-config.php
+<Files wp-config.php>
+    order allow,deny
+    deny from all
+</Files>
+
+# Proteger el directorio wp-admin permitiendo solo accesos válidos
+<FilesMatch "^(.*\.php)$">
+    Order Deny,Allow
+    Deny from all
+    Allow from all
+</FilesMatch>
+
+# Opcional: Bloquear el acceso directo a directorios sensibles
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
